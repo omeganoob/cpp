@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+add_compile_options(-save-temps)
+project(MyProject VERSION 0.1.0 LANGUAGES C CXX)
+add_executable(MyProject)
+target_sources(MyProject PRIVATE main.cpp saiyan.cpp namek.cpp)
