@@ -11,6 +11,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(CMAKE_INSTALL_PREFIX "/mnt/e/fpt_fresher/cpp/lib_study/" CACHE PATH "Installation Directory" FORCE)
 
-install(TARGETS ${LIBNAME} ARCHIVE DESTINATION  lib/bin/)
+install(TARGETS ${LIBNAME} 
+    ARCHIVE DESTINATION lib/bin/
+    LIBRARY DESTINATION dll/bin/)
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION lib/include/)

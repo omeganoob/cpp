@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20.0)
+project(test_1 VERSION 0.1.0 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 23)
+add_executable(${PROJECT_NAME})
+# set(MAIN class_lib.cpp)
+set(MAIN func_lib.cpp)
+target_sources(${PROJECT_NAME} PRIVATE ${MAIN})
