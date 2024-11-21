@@ -12,9 +12,9 @@ namespace my_dlib
         float magnitude() const;
         scalar_vec normalized() const;
         void print(std::ostream& os) const;
+
         float operator[] (const char& c) const;
         scalar_vec& operator+ (const scalar_vec& other);
-
         scalar_vec& operator- (const scalar_vec& other);
         scalar_vec& operator* (const scalar_vec& other);
         scalar_vec& operator/ (const scalar_vec& other);

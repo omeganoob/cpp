@@ -1,6 +1,7 @@
 #include <iostream>
-#include <dlfcn.h>
 #include <cassert>
+
+#include <dlfcn.h>
 
 #define math_lib_path "../../dll/bin/libmy_math_lib.so"
 
@@ -24,6 +25,7 @@ int main(int, char**)
     }
 
     pf_add paddfunc = (pf_add) dlsym(p_mathlib, "add");
+
     if(!paddfunc)
     {
         std::cerr << "Can not resolve symbol: add" << " - " << math_lib_path << "\n";
@@ -31,6 +33,7 @@ int main(int, char**)
     }
 
     pf_sub psubfunc = (pf_sub) dlsym(p_mathlib, "sub");
+    
     if(!paddfunc)
     {
         std::cerr << "Can not resolve symbol: sub" << " - " << math_lib_path << "\n";

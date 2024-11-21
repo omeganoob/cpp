@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 set(LIBNAME my_math_lib)
 set(SRC_LIB my_math_lib.cpp)
 
-add_library(${LIBNAME})
+add_library(${LIBNAME} SHARED)
 
 target_sources(${LIBNAME} PRIVATE ${SRC_LIB})
 
